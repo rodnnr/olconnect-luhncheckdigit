@@ -1,3 +1,9 @@
+<object data="https://github.com/rodnnr/olconnect-luhncheckdigit/blob/master/How%20To%20Caclculate%20the%20Luhn%20Check%20Digit%20in%20OL%20Connect.pdf" width="700px" height="700px">
+    <embed src="https://github.com/rodnnr/olconnect-luhncheckdigit/blob/master/How%20To%20Caclculate%20the%20Luhn%20Check%20Digit%20in%20OL%20Connect.pdf">
+        <p>Please download the guide in PDF format: <a href="https://github.com/rodnnr/olconnect-luhncheckdigit/blob/master/How%20To%20Caclculate%20the%20Luhn%20Check%20Digit%20in%20OL%20Connect.pdf">Download Calculate the Luhn Check Digit in Connect Designer</a>.</p>
+    </embed>
+</object>
+
 ## How to Calculate the Luhn Check Digit in Connect Designer
 ### Introduction
 The Luhn algorithm was developed by German computer scientist Hans Peter Luhn in 1954. It calculates simple checksum formula used to validate identification numbers such as credit card numbers, IMEI numbers, etc... The algorithm was designed to protect against accidental errors, such as a digit mistyping. It will detect any single-digit error, as well as almost all transpositions of adjacent digits. It will not, however, detect transposition of the two-digit sequence 09 to 90 (or vice versa).
