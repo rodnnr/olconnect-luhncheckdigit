@@ -23,29 +23,29 @@ This algorithm allows checking credit card numbers MasterCard/AMEX/Visa of IMEI 
 The algorithm starts at the end of the number, from the most right digit to the first left digit.
 Double all digits of even rank.
 ```cs
-    8	7	2	5	6	0	0	2	1	4	3	9	7	4	6	4	4	5
-		x2		x2		x2		x2		x2		x2		x2		x2		x2
-	8	14	2	10	6	0	0	4	1	8	3	18	7	8	6	8	4	10
+8	7	2	5	6	0	0	2	1	4	3	9	7	4	6	4	4	5
+	x2		x2		x2		x2		x2		x2		x2		x2		x2
+8	14	2	10	6	0	0	4	1	8	3	18	7	8	6	8	4	10
  
 ```
 **Step 2**
 
 If the double of a digit is equal or greater than 10, replace the result by the sum of digits in the double. Alternatively, simply take away 9 from the result of the double.
 ```cs
-    8	7	2	5	6	0	0	2	1	4	3	9	7	4	6	4	4	5
-		x2		x2		x2		x2		x2		x2		x2		x2		x2
-	8	14	2	10	6	0	0	4	1	8	3	18	7	8	6	8	4	10
-	8	1+4	2	1+0	6	0	0	8	1	8	3	1+8	7	8	6	8	4	1+0
+8	7	2	5	6	0	0	2	1	4	3	9	7	4	6	4	4	5
+	x2		x2		x2		x2		x2		x2		x2		x2		x2
+8	14	2	10	6	0	0	4	1	8	3	18	7	8	6	8	4	10
+8	1+4	2	1+0	6	0	0	8	1	8	3	1+8	7	8	6	8	4	1+0
 ```
 Then sum all the digits: 
 ```cs
-> 8+(**1+4**)+2+(**1+0**)+6+(**0**)+0+(**4**)+1+(**8**)+3+(**1+8**)+7+(**8**)+6+(**8**)+4+(**1+0**) = 81
+8+(1+4)+2+(1+0)+6+(0)+0+(4)+1+(8)+3+(1+8)+7+(8)+6+(8)+4+(1+0) = 81
 ```
 **Step 3**
 
 The control digit number is equal to 10-(sum%10):
 ```cs
-> 10-(81%10) =10-1=9
+10-(81%10) =10-1=9
 ```
 The Luhn Check Digit at position 19 will, therefore, be 9.
  
